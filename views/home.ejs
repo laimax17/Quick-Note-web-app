@@ -1,0 +1,18 @@
+<%- include("partials/header") %> 
+
+<h1> Home </h1>
+<p> <%= homePrint %> </p>
+<p>Simply click on "WRITE A POST" on top right corner and you would be able to write something here.</p>
+
+
+<%  postArray.forEach(post => { %>
+    <div>
+        <h1><%= post.title  %> </h1>
+        <p><%= post.content.substring(0,100) + " ..." %> 
+        <a href="/posts/<%= post.title %> ">Read More</a>
+        </p>
+        <p class = "text-info"><em><%= post.currentTime %></em> </h3>
+    </div>
+<% }) %>
+
+<%- include("partials/footer") %> 
