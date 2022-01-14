@@ -1,10 +1,10 @@
 <%- include("partials/header") %> 
-
+<div class="homeBody">
 <h1> Home </h1>
 <p> <%= homePrint %> </p>
 <p>Simply click on "WRITE A POST" on top right corner and you would be able to write something here.</p>
 
-
+<div>
 <%  postArray.forEach(post => { %>
     <div>
         <h1><%= post.title  %> </h1>
@@ -14,5 +14,8 @@
         <p class = "text-info"><em><%= post.currentTime %></em> </h3>
     </div>
 <% }) %>
+</div>
 
+</div>
+<!-- <div class="place-holder"><p>here</p></div> -->
 <%- include("partials/footer") %> 
