@@ -19,9 +19,11 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
-const uri = "mongodb://mongodb+srv://mazzy17:mazzy17@cluster0.pkkd1.mongodb.net/blogDB";
 
-mongoose.connect(uri);
+
+
+mongoose.connect("mongodb+srv://mazzy17:mazzy17@cluster0.pkkd1.mongodb.net/blogDB");
+
 
 const Schema = mongoose.Schema;
 
