@@ -9,9 +9,12 @@
     <div>
         <h1><%= post.title  %> </h1>
         <p><%= post.content.substring(0,100) + " ..." %> 
-        <a href="/posts/<%= post.title %> ">Read More</a>
+        <a href="/posts/<%= post._id %> ">Read More</a>
+        
+        <input type="hidden" name="postID" value="<%=post._id%>">
+
         </p>
-        <p class = "text-info"><em><%= post.currentTime %></em> </h3>
+        <p class = "text-info"><em><%= post.date %></em> </h3>
     </div>
 <% }) %>
 </div>
